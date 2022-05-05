@@ -76,11 +76,15 @@ def main():
         print(tilt)
         # GENERATE TITLE
         # 斜杠用来代码换行
-        cont = "今日沪指收盘: " + str(close_today) + "\n今日数据 \n\t -轻泡沫线: " + str(ma_mild_bubble) + "\n\t -合理均线：" + str(
-            ma_2500) + "\n\t -低估值线: " + str(ma_underrate)
+        cont = "今日沪指收盘: " + str(close_today) +\
+               "\n今日数据 \n\t -拿命玩股线: " + str(ma_crazy) + \
+               "\n\t -高度泡沫线：" + str(ma_severely_bubble) + \
+               "\n\t -轻度泡沫线：" + str(ma_mild_bubble) + \
+               "\n\t -估值合理线：" + str(ma_2500) + \
+               "\n\t -极度低估线: " + str(ma_underrate)
         test_out = cont.replace('\n', '\n\n')
         print(cont)
-        send_server(tilt, cont)  # 插入在需要推送的地方，我这里的"Her said"是我的标题，msg是我前面爬取的消息'''
+        # send_server(tilt, cont)  # 插入在需要推送的地方，我这里的"Her said"是我的标题，msg是我前面爬取的消息'''
         bs.logout
     except Exception:
         error = "服务异常"

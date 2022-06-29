@@ -26,10 +26,15 @@ def main():
         print('login respond  error_msg:' + lg.error_msg)
         # LOGIN
         t = dt.datetime.utcnow()
+        # print('伦敦标准时间', t)
         t = t + dt.timedelta(hours=8)
+        # print('北京时间', t)
         t11 = t + dt.timedelta(days=-365 * 11 - 3)
+        # print('11年前的此刻', t11)
         d = t.strftime('%Y-%m-%d')
+        # print('当天日期', d)
         d11 = t11.strftime('%Y-%m-%d')
+        # print('11年前的今天', d11)
         # TIME
         result = pd.DataFrame()
         k = bs.query_history_k_data_plus("sh.000001", "date,code,close", start_date=d11, end_date=d, frequency="d",
@@ -76,7 +81,8 @@ def main():
         print(tilt)
         # GENERATE TITLE
         # 斜杠用来代码换行
-        cont = "今日沪指收盘: " + str(close_today) +\
+        cont = "北京时间：" + str(t) +\
+               "\n今日沪指收盘: " + str(close_today) +\
                "\n今日数据 \n\t -拿命玩股线: " + str(ma_crazy) + \
                "\n\t -高度泡沫线: " + str(ma_severely_bubble) + \
                "\n\t -轻度泡沫线: " + str(ma_mild_bubble) + \

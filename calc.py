@@ -77,12 +77,11 @@ def main():
                 judge = "重度泡沫"
             else:
                 judge = "玩命"
-            tilt = "今日沪指处于 " + judge + " 状态"
+            tilt = "今日沪指收盘" + str(close_today) + "点处于 " + judge + " 状态"
         print(tilt)
         # GENERATE TITLE
         # 斜杠用来代码换行
         cont = "北京时间：" + str(t) +\
-               "\n今日沪指收盘: " + str(close_today) +\
                "\n今日数据 \n\t -拿命玩股线: " + str(ma_crazy) + \
                "\n\t -高度泡沫线: " + str(ma_severely_bubble) + \
                "\n\t -轻度泡沫线: " + str(ma_mild_bubble) + \

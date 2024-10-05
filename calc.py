@@ -65,7 +65,7 @@ def main():
         print('----------------------------')
 
         if close_today <= ma_underrate:
-            tilt = "今日沪指处于 极度低估"
+            tilt = "沪指极度低估"
         else:
             if close_today <= ma_2500:
                 judge = "比较便宜"
@@ -77,7 +77,7 @@ def main():
                 judge = "重度泡沫"
             else:
                 judge = "玩命"
-            tilt = "今日沪指收盘" + str(close_today) + "点处于 " + judge + " 状态"
+            tilt = "沪指" + str(close_today) + "点 " + judge
         print(tilt)
         # GENERATE TITLE
         # 斜杠用来代码换行

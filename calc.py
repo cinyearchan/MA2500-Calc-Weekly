@@ -77,7 +77,7 @@ def main():
                 judge = "重度泡沫"
             else:
                 judge = "玩命"
-            tilt = "沪指" + str(close_today) + "点 " + judge
+            tilt = "沪指" + str(close_today) + " " + judge
         print(tilt)
         # GENERATE TITLE
         # 斜杠用来代码换行
